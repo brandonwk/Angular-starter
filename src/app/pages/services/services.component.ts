@@ -22,6 +22,8 @@ export class ServicesComponent implements OnInit {
   model: any = {};
 
   public successfulForm;
+  public planSelected;
+  public plan;
 
   design  = faObjectUngroup;
   code    = faCode;
@@ -34,6 +36,13 @@ export class ServicesComponent implements OnInit {
 
   async ngOnInit() {
     this.successfulForm = false;
+    this.planSelected   = false;
+  }
+
+  async setPlan( plan ) {
+    this.planSelected = true;
+    this.plan = plan;
+    console.log(plan);
   }
 
   async submitCTA( formValue: any ) {
@@ -64,8 +73,11 @@ export class ServicesComponent implements OnInit {
      name: this.model.contactName,
      email: this.model.email,
      company: this.model.contactCompany,
+     plan: this.plan
    };
     return ctaApp;
   }
+
+
 
 }

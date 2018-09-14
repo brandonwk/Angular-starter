@@ -31,6 +31,7 @@
       justify-content: center;
       display: flex;
       font-family: serif;
+      padding-bottom: 60px;
 
       @media screen and (max-width: 965px) {
         font-size: 1.5rem;
@@ -345,7 +346,7 @@
       width: 100%;
       height: auto;
       margin: 0 auto;
-      border-bottom: 1px solid #d6d6d6;
+      //border-bottom: 1px solid #d6d6d6;
       //background: ;
       //color: darken(#7b8b8e, 10%);
 
@@ -482,6 +483,130 @@
         color: #666;
         text-align: center;
         word-break: break-word;
+      }
+
+      .pricing-area {
+        margin-top: 46px !important;
+        width: 80%;
+        margin: 0 auto;
+
+        .pricing-table {
+
+          .pricing-plan {
+
+            .plan-item {
+              background: white;
+              border-bottom: .1rem solid #f3f3f3;
+              padding: .75em;
+              align-content: center;
+              text-align: center;
+              font-size: .9em;
+
+              i {
+                font-size: 1.1rem;
+                color: #ed2c5b;
+              }
+            }
+
+            .plan-price {
+              flex-direction: column;
+              display: flex;
+            }
+
+            .plan-footer {
+
+              .button {
+                background-color: #ed2c5b;
+                color: #FFF;
+
+                &:hover {
+                  background-color: darken(#ed2c5b, 10%);
+                }
+              }
+
+            }
+          }
+        }
+
+      }
+
+      .selected-plan {
+        width: 79%;
+        height: auto;
+        border: 1px solid #d6d6d6;
+        color: #666;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        background-color: white;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 26px;
+        margin-top: 60px;
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: normal;
+          text-align: center;
+
+          b {
+            font-weight: 500;
+            text-decoration: underline;
+            color: #ed2c5b;
+            font-size: 1.4rem;
+          }
+        }
+
+        p {
+          font-size: 1.1rem;
+          font-weight: 300;
+          line-height: 1.75;
+          letter-spacing: 1px;
+          color: #666;
+          text-align: center;
+          word-break: break-word;
+        }
+
+        form {
+          width: 95%;
+          height: auto;
+          margin: 0 auto;
+
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          margin-top: 25px;
+          margin-bottom: 25px;
+
+          input {
+            height: 40px;
+          }
+
+          button {
+            background-color: #ed2c5b;
+            width: 110px;
+            height: 40px;
+            color: #FFFFFF;
+
+            &:hover {
+              background-color: darken( #ed2c5b, 7%);
+            }
+          }
+
+          .is-invalid {
+            border: 1px solid #ed2c5b !important;
+          }
+
+          .invalid-feedback {
+            color:  #ed2c5b;
+            font-size: .9rem;
+            padding-top: 5px;
+            font-style: italic;
+          }
+
+        }
+
       }
     }
 
