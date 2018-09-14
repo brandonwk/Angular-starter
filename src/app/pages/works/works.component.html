@@ -1,0 +1,43 @@
+<div class="works-page">
+  <div class="hero">
+    <div class="container">
+      <span>Not just a Web development Company - we're dedicated to creating truly remarkable products.</span>
+    </div>
+  </div>
+
+  <div class="works-content">
+    <div class="container">
+
+      <div class="work-slice" *ngFor="let project of randomProjects">
+
+        <div class="work-image">
+          <div class="image-content" [style.background-image]="'url('+project?.image+')'">
+          </div>
+        </div>
+
+        <div class="work-content">
+          <h1>{{project?.title}}</h1>
+          <p>{{project?.description}}</p>
+          <div class="view">
+            <a [routerLink]="['/project/information']" [queryParams]="{id: project?.id}">
+              <span>View Project</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!--
+      <div class="quote-section">
+        <blockquote>
+          <h1><span>Andrew </span> - Dulak Physical Therapy and Golf</h1>
+          <p>Brandon did an amazing job on my website! Super easy process. Brandon was in constant communication to make sure every detail of the website was correct. If you are a new company just getting established or a growing company and looking for a fresh new website definitely check out knapp development! Highly recommended.</p>
+        </blockquote>
+      </div>
+      -->
+
+    </div>
+
+  </div>
+
+</div>

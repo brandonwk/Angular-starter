@@ -1,0 +1,214 @@
+.contact-us {
+  width: 100%;
+  height: auto;
+  min-height: 85vh;
+  border-top: 1px solid #ebedee;
+
+  .gradient {
+    width: 50%;
+    height: auto;
+    min-height: 85vh;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-right: 1px solid #fdfbfb;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .content {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        color: #363F54;
+        font-size: 2rem;
+        line-height: 1.75;
+        font-weight: 600;
+
+        @media screen and (max-width: 965px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        display: inline-block;
+        color: lighten(#363F54, 20%);
+        font-size: 1.1rem;
+        line-height: 28px;
+        text-align: left;
+
+        @media screen and (max-width: 965px) {
+          font-size: 1rem;
+          line-height: 1.75;
+          text-align: left;
+        }
+      }
+
+      @media screen and (max-width: 965px) {
+        width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 965px) {
+      width: 100%;
+      min-height: 0;
+
+      padding-bottom: 40px;
+    }
+  }
+
+  .form-section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .form {
+      width: 91%;
+      margin-left: 27px;
+
+      .successForm {
+        min-height: 8vh;
+        margin-top: -40px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 20px;
+
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: .875rem;
+        }
+      }
+
+      .is-invalid {
+        border: 1px solid #ff3860 !important;
+      }
+
+      .invalid-feedback {
+        color: #ff3860;
+        font-size: .9rem;
+        padding-top: 5px;
+        font-style: italic;
+      }
+
+      fieldset {
+        border: none transparent;
+
+        @media screen and (max-width: 965px) {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          max-width: 95% !important;
+          min-width: 95% !important;
+          margin-left: 2.5%;
+          margin-right: 2.5%;
+        }
+      }
+
+      .is-horizontal {
+        align-items: center;
+        padding: 30px 0px 30px 0px;
+        border-bottom: 1px solid #E1E5EF;
+
+        @media screen and (max-width: 965px) {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          padding: 15px 0px 15px 0px;
+        }
+      }
+
+      .label {
+        color: #363F54;
+        font-size: 12px !important;
+        line-height: 17px;
+        text-align: left;
+        width: 160px;
+      }
+
+      .alt {
+        margin-bottom: 30px;
+        width: 375px;
+        margin-top: 23px;
+
+        @media screen and (max-width: 965px) {
+          width: 275px;
+        }
+      }
+
+      .control {
+        //width: 85%;
+        width: 95%;
+        float: right;
+
+        @media screen and (max-width: 965px) {
+          width: 99%;
+          float: none;
+        }
+      }
+
+      .input, select {
+        color: #363F54;
+        font-size: 14px;
+        outline: none;
+        height: 34px !important;
+        padding-left: 18px;
+        width: 100%;
+        border: 1px solid #DFDFDF;
+        border-radius: 3px;
+        background-color: #FDFDFD;
+        -webkit-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease;
+
+        option {
+          color: #363F54;
+        }
+      }
+
+      textarea {
+        min-width: 50%;
+        max-width: 73% !important;
+        float: right;
+
+        @media screen and (max-width: 965px) {
+          min-width: 100%;
+          max-width: 100% !important;
+          float: right;
+        }
+      }
+
+      .send {
+        margin-top: 27px;
+        float: right;
+        margin-right: 13px;
+      }
+
+      @media screen and (max-width: 965px) {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 965px) {
+      margin-top: 20px;
+    }
+  }
+
+
+}

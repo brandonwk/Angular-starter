@@ -1,0 +1,122 @@
+<div class="contact-us">
+  <div class="columns is-paddingless is-marginless">
+    <div class="column is-half gradient">
+      <div class="content">
+        <h1>LET’S WORK TOGETHER</h1>
+        <p>Describe your project and leave us your contact info, we’ll get back to you within 24 hours.</p>
+      </div>
+
+    </div>
+    <div class="column form-section">
+      <div class="form">
+        <div class="successForm" *ngIf="successfulForm">
+          <h1>Thank you!</h1>
+          <p>Your form was submitted, someone will contact you in the next 24 hours.</p>
+        </div>
+        <form name="form" (ngSubmit)="f.form.valid && submitContact(f.value)" #f="ngForm" novalidate *ngIf="!successfulForm">
+          <fieldset ngModelGroup="companyInformation">
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">YOUR NAME</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" class="form-control input" name="contactName" [(ngModel)]="model.contactName" #contactName="ngModel" [ngClass]="{'is-invalid': f.submitted && contactName.invalid}" required minlength="1" maxlength="75"/>
+                    <div *ngIf="f.submitted && contactName.invalid" class="invalid-feedback">
+                      <div *ngIf="contactName.errors.required">
+                        <p>Please enter a name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">YOUR EMAIL ADDRESS</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" class="form-control input" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" email minlength="0" maxlength="50" required/>
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                      <div *ngIf="email.errors.required">Please enter an email</div>
+                      <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">YOUR COMPANY</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" class="form-control input" name="contactCompany" [(ngModel)]="model.contactCompany" #contactCompany="ngModel" [ngClass]="{'is-invalid': f.submitted && contactCompany.invalid}" required minlength="1" maxlength="75"/>
+                    <div *ngIf="f.submitted && contactCompany.invalid" class="invalid-feedback">
+                      <div *ngIf="contactCompany.errors.required">
+                        <p>Please enter a company name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">WHEN DO YOU WANT TO START?</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control is-expanded">
+                    <div class="select is-fullwidth">
+                      <select [ngModel] name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel" startDate [ngClass]="{'is-invalid': f.submitted && startDate.invalid}" required>
+                        <option value="twoWeeks">Next Two weeks</option>
+                        <option value="oneMonth">In one Month</option>
+                        <option value="twoMonths">In Two Months</option>
+                        <option value="halfYear">Next Six Months</option>
+                        <option value="notSure">I'm not sure</option>
+                      </select>
+                    </div>
+                    <div *ngIf="f.submitted && startDate.invalid" class="invalid-feedback">
+                      <div *ngIf="startDate.errors.required">Please select a start date for your project.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label alt">DESCRIBE YOUR NEEDS, THE MORE WE KNOW, THE BETTER.
+              </label>
+              <div class="control">
+                <textarea class="textarea" placeholder="" name="porjectDetails" [(ngModel)]="model.projectDetails" #projectDetails="ngModel" projectDetails [ngClass]="{'is-invalid': f.submitted && projectDetails.invalid}" required></textarea>
+              </div>
+              <div *ngIf="f.submitted && projectDetails.invalid" class="invalid-feedback">
+                <div *ngIf="projectDetails.errors.required">
+                  <p style="float: right; margin-top: 10px; margin-right: 19%;">Please describe the project you want to work on.</p>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <div class="send">
+            <div class="field is-grouped is-grouped-right">
+              <p class="control">
+                <button class="button is-primary">SEND</button>
+              </p>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

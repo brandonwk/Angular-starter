@@ -1,0 +1,1023 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angular-starter documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angular-starter documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HomepageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/homepage/homepage.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code><a href="../injectables/ProjectsService.html" target="_self" >ProjectsService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-homepage</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>homepage.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./homepage.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#allproject">allproject</a>
+                            </li>
+                            <li>
+                                <a href="#caretRight">caretRight</a>
+                            </li>
+                            <li>
+                                <a href="#left">left</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#projects">projects</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#projectsArr">projectsArr</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#projectss">projectss</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#randomProjects">randomProjects</a>
+                            </li>
+                            <li>
+                                <a href="#right">right</a>
+                            </li>
+                            <li>
+                                <a href="#selectedIndex">selectedIndex</a>
+                            </li>
+                            <li>
+                                <a href="#transform">transform</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#down">down</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#up">up</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(projectss: <a href="../injectables/ProjectsService.html">ProjectsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/homepage/homepage.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>projectss</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/ProjectsService.html" target="_self" >ProjectsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="down"></a>
+                        <span class="name">
+                            <b>
+                            down
+                            </b>
+                            <a href="#down"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>down()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/homepage/homepage.component.ts:82</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Async</span>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/homepage/homepage.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="up"></a>
+                        <span class="name">
+                            <b>
+                            up
+                            </b>
+                            <a href="#up"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>up()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/homepage/homepage.component.ts:75</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allproject"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            allproject
+                            </b>
+                            <a href="#allproject"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>allproject:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/homepage/homepage.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="caretRight"></a>
+                        <span class="name">
+                            <b>
+                            caretRight
+                            </b>
+                            <a href="#caretRight"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>caretRight:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faCaretRight</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/homepage/homepage.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="left"></a>
+                        <span class="name">
+                            <b>
+                            left
+                            </b>
+                            <a href="#left"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>left:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faChevronLeft</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/homepage/homepage.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="projects"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            projects
+                            </b>
+                            <a href="#projects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>projects:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/homepage/homepage.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="projectsArr"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            projectsArr
+                            </b>
+                            <a href="#projectsArr"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>projectsArr:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/homepage/homepage.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="projectss"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            projectss
+                            </b>
+                            <a href="#projectss"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>projectss:     <code><a href="../injectables/ProjectsService.html" target="_self" >ProjectsService</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/ProjectsService.html" target="_self" >ProjectsService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/homepage/homepage.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="randomProjects"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            randomProjects
+                            </b>
+                            <a href="#randomProjects"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>randomProjects:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/homepage/homepage.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="right"></a>
+                        <span class="name">
+                            <b>
+                            right
+                            </b>
+                            <a href="#right"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>right:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faChevronRight</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/homepage/homepage.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedIndex"></a>
+                        <span class="name">
+                            <b>
+                            selectedIndex
+                            </b>
+                            <a href="#selectedIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>selectedIndex:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/homepage/homepage.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transform"></a>
+                        <span class="name">
+                            <b>
+                            transform
+                            </b>
+                            <a href="#transform"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>transform:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/homepage/homepage.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ProjectsService } from &#x27;../shared/services/projects.service&#x27;;
+
+import * as _ from &#x27;lodash&#x27;;
+
+import { faChevronLeft } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { faChevronRight } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { faCaretRight } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+// import { faDesktop }    from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+// import { faLayerGroup } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+// import { faPaperPlane } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+@Component({
+  selector: &#x27;app-homepage&#x27;,
+  templateUrl: &#x27;./homepage.component.html&#x27;,
+  styleUrls: [&#x27;./homepage.component.scss&#x27;],
+  providers: [ ProjectsService ]
+})
+export class HomepageComponent implements OnInit {
+
+  left       &#x3D; faChevronLeft;
+  right      &#x3D; faChevronRight;
+  caretRight &#x3D; faCaretRight;
+
+  selectedIndex: number;
+  transform: number;
+
+  public allproject;
+  public projectsArr;
+  public projects;
+  public randomProjects;
+
+  constructor( public projectss: ProjectsService ) {
+    this.selectedIndex &#x3D; 0;
+    this.transform &#x3D; 100;
+  }
+
+  //
+  // sliderArr &#x3D; [
+  //   {
+  //     image: &#x27;http://images.ctfassets.net/s2kor2hftzlf/3wT3zdFFJe04a6Umw6mCqs/b1604b2a74d891de379fed557019e1e1/Hero-2.jpg&#x27;,
+  //     title: &#x27;Pearl Manual Therapy&#x27;,
+  //     description: &#x27;Using the web to increase the growth of a physical company.&#x27;,
+  //     link: &#x27;/pearl&#x27;
+  //   },
+  //   {
+  //     image: &#x27;https://images.ctfassets.net/82pbo053ocet/5iI2luTNY4QOko8q2SaGKM/c9cd74e456590e304b7c73019a1d4b2e/Hero-image.jpg&#x27;,
+  //     title: &#x27;Dulak Physical therapy&#x27;,
+  //     description: &#x27;Providing a modern look for an old website.&#x27;,
+  //     link: &#x27;/dulak&#x27;
+  //   },
+  //   {
+  //     image: &#x27;http://images.ctfassets.net/tcqbxfcp3htz/fNL0KSapX28WKyc22IuAA/79aba751626c72b042f3fa63974fe92b/C785130F-1A81-4A91-A86E-B66600D2A6DB.jpeg&#x27;,
+  //     title: &#x27;Hodapp Personal Training&#x27;,
+  //     description: &#x27;Lorem ipsum dot sollar dot em&#x27;,
+  //     link: &#x27;/hodapp&#x27;
+  //   }
+  // ];
+
+  async ngOnInit() {
+    this.allproject &#x3D; await this.projectss.allProjects();
+    this.projectsArr &#x3D; [];
+
+    for ( let i &#x3D; 0, max &#x3D; this.allproject.length; i &lt; max; i +&#x3D; 1 ) {
+      const p &#x3D; this.allproject[i];
+      this.projectsArr.push(p);
+    }
+    this.projects &#x3D; [].concat.apply([], this.projectsArr );
+    this.randomProjects &#x3D; _.sampleSize(this.projects, 3);
+    console.log(this.randomProjects);
+  }
+
+  // Slider controls
+  up() {
+    this.selectedIndex ++;
+    if ( this.selectedIndex &gt; 2) {
+      this.selectedIndex &#x3D; 0;
+    }
+  }
+
+  down() {
+    this.selectedIndex --;
+    if ( this.selectedIndex &lt; 0) {
+      this.selectedIndex &#x3D; 2;
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;homepage&quot;&gt;
+
+  &lt;div class&#x3D;&quot;hero&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+
+      &lt;div class&#x3D;&quot;content-container&quot; *ngFor&#x3D;&quot;let i of randomProjects; let select &#x3D; index;&quot;&gt;
+            &lt;div class&#x3D;&quot;slide-content&quot; [ngClass]&#x3D;&quot;{&#x27;selected&#x27;: select &#x3D;&#x3D; selectedIndex}&quot;&gt;
+              &lt;div class&#x3D;&quot;contents&quot;&gt;
+                &lt;h1&gt;{{i?.title}}&lt;/h1&gt;
+                &lt;p&gt;{{i?.description}}&lt;/p&gt;
+                &lt;div class&#x3D;&quot;project-button&quot; [routerLink]&#x3D;&quot;[&#x27;/project/information&#x27;]&quot; [queryParams]&#x3D;&quot;{id: i?.id}&quot;&gt;
+                  &lt;span&gt;VIEW PROJECT&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;slider-controls&quot;&gt;
+                  &lt;ul&gt;
+                    &lt;li (click)&#x3D;&quot;down();&quot;&gt;
+                      &lt;fa-icon [icon]&#x3D;&quot;left&quot;&gt;&lt;/fa-icon&gt;
+                    &lt;/li&gt;
+                    &lt;li (click)&#x3D;&quot;up();&quot;&gt;
+                      &lt;fa-icon [icon]&#x3D;&quot;right&quot;&gt;&lt;/fa-icon&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;images&quot;&gt;
+                &lt;div class&#x3D;&quot;img&quot; [style.background-image]&#x3D;&quot;&#x27;url(&#x27; + i?.image + &#x27;)&#x27;&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;content&quot;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;div class&#x3D;&quot;slogan&quot;&gt;
+        &lt;p&gt;Knappdevelopment uses data to help companies create, transform, and grow.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;other-clients&quot;&gt;
+      &lt;ul&gt;
+        &lt;li [routerLink]&#x3D;&quot;[&#x27;/project/information&#x27;]&quot; [queryParams]&#x3D;&quot;{id: &#x27;DCU&#x27;}&quot;&gt;
+          &lt;div&gt;
+            &lt;h2&gt;Dickinson College&lt;/h2&gt;
+            &lt;p&gt;Providing collaboration with potential students with custom built components.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;fa-icon [icon]&#x3D;&quot;caretRight&quot;&gt;&lt;/fa-icon&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li [routerLink]&#x3D;&quot;[&#x27;/project/information&#x27;]&quot; [queryParams]&#x3D;&quot;{id: &#x27;EEG&#x27;}&quot;&gt;
+          &lt;div&gt;
+            &lt;h2&gt;Empire Education Group&lt;/h2&gt;
+            &lt;p&gt;Building enterprise software for inner-department collaboration.&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;fa-icon [icon]&#x3D;&quot;caretRight&quot;&gt;&lt;/fa-icon&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+
+        &lt;li [routerLink]&#x3D;&quot;[&#x27;/project/information&#x27;]&quot; [queryParams]&#x3D;&quot;{id: &#x27;DPT&#x27;}&quot;&gt;
+          &lt;div&gt;
+            &lt;h2&gt;Dulak Physical therapy&lt;/h2&gt;
+            &lt;p&gt;Pittsburgh&#x27;s Specialized Physical Therapy and Golf Rehab Company&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;fa-icon [icon]&#x3D;&quot;caretRight&quot;&gt;&lt;/fa-icon&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;view-more-clients&quot;&gt;
+      &lt;span routerLink&#x3D;&quot;/works&quot;&gt;VIEW MORE PROJECTS&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;services&quot;&gt;
+      &lt;div class&#x3D;&quot;container&quot;&gt;
+        &lt;div class&#x3D;&quot;intro&quot;&gt;
+          &lt;span&gt;Adding value&lt;/span&gt;
+          &lt;h2&gt;We can provide services for anything your company needs&lt;/h2&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;contents&quot;&gt;
+
+          &lt;ul&gt;
+            &lt;!-- Front End Development --&gt;
+            &lt;li&gt;
+              &lt;!--&lt;fa-icon [icon]&#x3D;&quot;frontend&quot;&gt;&lt;/fa-icon&gt;--&gt;
+              &lt;i class&#x3D;&quot;fal fa-desktop&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Front End Development&lt;/span&gt;
+              &lt;p&gt;We use HTML, CSS, and Javascript to make our mockups and prototypes come alive. We make sure all designs are responsive and look great on each and every screen, flexibile for all devices, and work with all modern browsers.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;!-- Back End Development --&gt;
+            &lt;li&gt;
+              &lt;!--&lt;fa-icon [icon]&#x3D;&quot;backend&quot;&gt;&lt;/fa-icon&gt;--&gt;
+              &lt;i class&#x3D;&quot;fal fa-layer-group&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Back End Development&lt;/span&gt;
+              &lt;p&gt;Although most users never see this part of a website, the backend is responsible for powering all features. Driving business logic and delivering content. Backend technologies are usually built on Node.js, PHP, and many more.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;!-- Marketing --&gt;
+            &lt;li&gt;
+              &lt;!--&lt;fa-icon [icon]&#x3D;&quot;marketing&quot;&gt;&lt;/fa-icon&gt;--&gt;
+              &lt;i class&#x3D;&quot;fal fa-paper-plane&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Marketing&lt;/span&gt;
+              &lt;p&gt;We use a combination of both Facebook and email marketing, to drive the biggest impact to current and potential customers, and clients. We build custom landing pages, email templates to bring the biggest impact from your company.&lt;/p&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;contact-us&quot;&gt;
+      &lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;margin-left: 0; margin-right: 0;&quot;&gt;
+        &lt;span&gt;We want to hear about you.&lt;/span&gt;
+        &lt;h2&gt;Want to work with us?&lt;/h2&gt;
+
+        &lt;button&gt;
+          &lt;span&gt;Okay, let&#x27;s talk&lt;/span&gt;
+        &lt;/button&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="homepage">  <div class="hero">    <div class="container">      <div class="content-container" *ngFor="let i of randomProjects; let select = index;">            <div class="slide-content" [ngClass]="{\'selected\': select == selectedIndex}">              <div class="contents">                <h1>{{i?.title}}</h1>                <p>{{i?.description}}</p>                <div class="project-button" [routerLink]="[\'/project/information\']" [queryParams]="{id: i?.id}">                  <span>VIEW PROJECT</span>                </div>                <div class="slider-controls">                  <ul>                    <li (click)="down();">                      <fa-icon [icon]="left"></fa-icon>                    </li>                    <li (click)="up();">                      <fa-icon [icon]="right"></fa-icon>                    </li>                  </ul>                </div>              </div>              <div class="images">                <div class="img" [style.background-image]="\'url(\' + i?.image + \')\'"></div>              </div>            </div>      </div>    </div>  </div>  <div class="content">    <div class="container">      <div class="slogan">        <p>Knappdevelopment uses data to help companies create, transform, and grow.</p>      </div>    </div>    <div class="other-clients">      <ul>        <li [routerLink]="[\'/project/information\']" [queryParams]="{id: \'DCU\'}">          <div>            <h2>Dickinson College</h2>            <p>Providing collaboration with potential students with custom built components.</p>          </div>          <div>            <fa-icon [icon]="caretRight"></fa-icon>          </div>        </li>        <li [routerLink]="[\'/project/information\']" [queryParams]="{id: \'EEG\'}">          <div>            <h2>Empire Education Group</h2>            <p>Building enterprise software for inner-department collaboration.</p>          </div>          <div>            <fa-icon [icon]="caretRight"></fa-icon>          </div>        </li>        <li [routerLink]="[\'/project/information\']" [queryParams]="{id: \'DPT\'}">          <div>            <h2>Dulak Physical therapy</h2>            <p>Pittsburgh\'s Specialized Physical Therapy and Golf Rehab Company</p>          </div>          <div>            <fa-icon [icon]="caretRight"></fa-icon>          </div>        </li>      </ul>    </div>    <div class="view-more-clients">      <span routerLink="/works">VIEW MORE PROJECTS</span>    </div>    <div class="services">      <div class="container">        <div class="intro">          <span>Adding value</span>          <h2>We can provide services for anything your company needs</h2>        </div>        <div class="contents">          <ul>            <!-- Front End Development -->            <li>              <!--<fa-icon [icon]="frontend"></fa-icon>-->              <i class="fal fa-desktop"></i>              <span>Front End Development</span>              <p>We use HTML, CSS, and Javascript to make our mockups and prototypes come alive. We make sure all designs are responsive and look great on each and every screen, flexibile for all devices, and work with all modern browsers.</p>            </li>            <!-- Back End Development -->            <li>              <!--<fa-icon [icon]="backend"></fa-icon>-->              <i class="fal fa-layer-group"></i>              <span>Back End Development</span>              <p>Although most users never see this part of a website, the backend is responsible for powering all features. Driving business logic and delivering content. Backend technologies are usually built on Node.js, PHP, and many more.</p>            </li>            <!-- Marketing -->            <li>              <!--<fa-icon [icon]="marketing"></fa-icon>-->              <i class="fal fa-paper-plane"></i>              <span>Marketing</span>              <p>We use a combination of both Facebook and email marketing, to drive the biggest impact to current and potential customers, and clients. We build custom landing pages, email templates to bring the biggest impact from your company.</p>            </li>          </ul>        </div>      </div>    </div>    <div class="contact-us">      <div class="container" style="margin-left: 0; margin-right: 0;">        <span>We want to hear about you.</span>        <h2>Want to work with us?</h2>        <button>          <span>Okay, let\'s talk</span>        </button>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CasestudyComponent', 'selector': 'app-casestudy'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomepageComponent', 'selector': 'app-homepage'},{'name': 'WorksComponent', 'selector': 'app-works'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomepageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomepageComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

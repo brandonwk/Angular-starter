@@ -1,3 +1,134 @@
-<p>
-  homepage works!
-</p>
+<div class="homepage">
+
+  <div class="hero">
+    <div class="container">
+
+      <div class="content-container" *ngFor="let i of randomProjects; let select = index;">
+        <div class="slide-content" [ngClass]="{'selected': select == selectedIndex}">
+          <div class="contents">
+            <h1>{{i?.title}}</h1>
+            <p>{{i?.description}}</p>
+            <div class="project-controls">
+              <div class="project-button" [routerLink]="['/project/information']" [queryParams]="{id: i?.id}">
+                <span>VIEW PROJECT</span>
+              </div>
+              <!--
+              <div class="slider-controls" [ngClass]="{'selected': select == selectedIndex}">
+                <ul>
+                  <li (click)="down();">
+                    <fa-icon [icon]="left"></fa-icon>
+                  </li>
+                  <li (click)="up();">
+                    <fa-icon [icon]="right"></fa-icon>
+                  </li>
+                </ul>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="images">
+            <div class="img" [style.background-image]="'url(' + i?.image + ')'"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="slogan">
+        <p>Knappdevelopment uses data to help companies create, transform, and grow.</p>
+      </div>
+    </div>
+
+    <div class="other-clients">
+      <ul>
+        <li [routerLink]="['/project/information']" [queryParams]="{id: 'DCU'}">
+          <div>
+            <h2>Dickinson College</h2>
+            <p>Providing collaboration with potential students with custom built components.</p>
+          </div>
+          <div>
+            <fa-icon [icon]="caretRight"></fa-icon>
+          </div>
+        </li>
+        <li [routerLink]="['/project/information']" [queryParams]="{id: 'EEG'}">
+          <div>
+            <h2>Empire Education Group</h2>
+            <p>Building enterprise software for inner-department collaboration.</p>
+          </div>
+          <div>
+            <fa-icon [icon]="caretRight"></fa-icon>
+          </div>
+        </li>
+
+        <li [routerLink]="['/project/information']" [queryParams]="{id: 'DPT'}">
+          <div>
+            <h2>Dulak Physical therapy</h2>
+            <p>Pittsburgh's Specialized Physical Therapy and Golf Rehab Company</p>
+          </div>
+          <div>
+            <fa-icon [icon]="caretRight"></fa-icon>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="view-more-clients">
+      <span routerLink="/works">VIEW MORE PROJECTS</span>
+    </div>
+
+    <div class="services">
+      <div class="container">
+        <div class="intro">
+          <span>Adding value</span>
+          <h2>We can provide services for anything your company needs</h2>
+        </div>
+
+        <div class="contents">
+
+          <ul>
+            <!-- Front End Development -->
+            <li>
+              <!--<fa-icon [icon]="frontend"></fa-icon>-->
+              <i class="fal fa-desktop"></i>
+              <span>Front End Development</span>
+              <p>We use HTML, CSS, and Javascript to make our mockups and prototypes come alive. We make sure all designs are responsive and look great on each and every screen, flexibile for all devices, and work with all modern browsers.</p>
+            </li>
+            <!-- Back End Development -->
+            <li>
+              <!--<fa-icon [icon]="backend"></fa-icon>-->
+              <i class="fal fa-layer-group"></i>
+              <span>Back End Development</span>
+              <p>Although most users never see this part of a website, the backend is responsible for powering all features. Driving business logic and delivering content. Backend technologies are usually built on Node.js, PHP, and many more.</p>
+            </li>
+            <!-- Marketing -->
+            <li>
+              <!--<fa-icon [icon]="marketing"></fa-icon>-->
+              <i class="fal fa-paper-plane"></i>
+              <span>Marketing</span>
+              <p>We use a combination of both Facebook and email marketing, to drive the biggest impact to current and potential customers, and clients. We build custom landing pages, email templates to bring the biggest impact from your company.</p>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <div class="container" style="margin-left: 0; margin-right: 0;">
+        <span>We want to hear about you.</span>
+        <h2>Want to work with us?</h2>
+
+        <button routerLink="/contact">
+          <span>Okay, let's talk</span>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,148 @@
+<div class="services-page">
+  <div class="hero">
+    <div class="container">
+      <!--<span>Plans that scale with your company</span>-->
+      <span>We believe in a transparent, flexible, and open communication approach to building websites.</span>
+    </div>
+  </div>
+
+  <div class="services-content">
+    <div class="container">
+
+      <div class="services-overview">
+        <h1>We provide the following to grow your comapny</h1>
+
+        <ul>
+          <li>
+            <!--<fa-icon [icon]="design"></fa-icon>-->
+            <i class="fal fa-object-ungroup"></i>
+            <span>Website Design</span>
+          </li>
+          <li>
+            <i class="fal fa-code-merge"></i>
+            <span>Website Development</span>
+          </li>
+          <li>
+            <i class="fal fa-server"></i>
+            <span>Website Hosting</span>
+          </li>
+          <li>
+            <i class="fab fa-connectdevelop"></i>
+            <span>API consuming/development</span>
+          </li>
+          <li>
+            <i class="fal fa-laptop"></i>
+            <span>Landing Page design/development</span>
+          </li>
+          <li>
+            <i class="fal fa-envelope-open"></i>
+            <span>Email campaign marketing</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="quote-section">
+        <blockquote>
+          <h1><span>Andrew </span> - <a href="https://www.dulakphysicaltherapyandgolf.com/" target="_blank" rel="noopener">Dulak Physical Therapy and Golf</a></h1>
+          <p>Brandon did an amazing job on my website! Super easy process. Brandon was in constant communication to make sure every detail of the website was correct. If you are a new company just getting established or a growing company and looking for a fresh new website definitely check out knapp development! Highly recommended.</p>
+        </blockquote>
+      </div>
+
+    </div>
+
+    <div class="process">
+      <div class="container">
+        <h2>Our process</h2>
+        <p>Spend time on your business and not your website.</p>
+        <ul>
+          <li>
+            <span>Initial meeting</span>
+            <p>We dive into your business strategies for reaching your business goals.</p>
+          </li>
+          <li>
+            <span>Design & Development</span>
+            <p>We strategically design and develop websites that elevate your brand and communicate with customers effectively.</p>
+          </li>
+          <li>
+            <span>Integrated Marketing</span>
+            <p>We coordinate with you to continuously evolve your online presence.</p>
+          </li>
+          <li>
+            <span>Hosting and Maintenance</span>
+            <p>Save time and money. Avoid downtime and miscommunication, when working with multiple tech companies. </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="container">
+        <div class="successForm" *ngIf="successfulForm">
+          <h1>Thank you!</h1>
+          <p>Your form was submitted, someone will contact you in the next 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="container" *ngIf="!successfulForm">
+        <h2>LET’S WORK TOGETHER</h2>
+        <p>We'd love to help with your project.</p>
+
+        <div class="form">
+          <form name="form" (ngSubmit)="f.form.valid && submitCTA(f.value)" #f="ngForm" novalidate>
+            <fieldset ngModelGroup="ctaInformation">
+              <div class="field is-horizontal">
+                <div class="field-body">
+                  <!-- Name -->
+                  <div class="field">
+                    <div class="control">
+                      <input type="text" class="form-control input" name="contactName" [(ngModel)]="model.contactName" #contactName="ngModel" [ngClass]="{'is-invalid': f.submitted && contactName.invalid}" required minlength="1" maxlength="75" placeholder="John smith"/>
+                      <div *ngIf="f.submitted && contactName.invalid" class="invalid-feedback">
+                        <div *ngIf="contactName.errors.required">
+                          <p>Please enter a name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Email -->
+                  <div class="field">
+                    <div class="control">
+                      <input type="text" class="form-control input" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" email minlength="0" maxlength="50" required placeholder="johnsmith@website.com"/>
+                      <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Please enter an email</div>
+                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- company -->
+                  <div class="field">
+                    <div class="control">
+                      <input type="text" class="form-control input" name="contactCompany" [(ngModel)]="model.contactCompany" #contactCompany="ngModel" [ngClass]="{'is-invalid': f.submitted && contactCompany.invalid}" required minlength="1" maxlength="75" placeholder="company name"/>
+                      <div *ngIf="f.submitted && contactCompany.invalid" class="invalid-feedback">
+                        <div *ngIf="contactCompany.errors.required">
+                          <p>Please enter a company name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Send -->
+                  <div class="send">
+                    <div class="field is-grouped-right is-grouped">
+                      <p class="control">
+                        <button class="button is-primary">SEND</button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="examples">
+      <div class="container"></div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="case-study">
+  <!--<div class="study-header" [style.background-image]="'url('+ project?.image +')'"></div>-->
+  <div class="study-header" [style.background-image]="'url('+ project?.image +')'">
+    <div class="content-container">
+      <div class="content">
+        <span><a routerLink="/works"> Projects</a> > {{project?.title}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="study-content">
+    <div class="about-project">
+      <div class="container">
+        <div class="columns is-paddingless is-marginless">
+          <div class="intro column is-two-fifths">
+            <h1>{{project?.title}}</h1>
+            <h2>{{project?.longdescription}}</h2>
+
+            <a href="{{project?.link}}" rel="noopener" target="_blank" tabindex="1" *ngIf="project?.completed === true">View project</a>
+            <a href="JavaScript:void(0);" rel="noopener" target="_blank" tabindex="1" *ngIf="project?.completed === false">Coming Soon</a>
+          </div>
+          <div class="services column">
+            <ul>
+              <li><b>Year:</b> {{project?.year}}</li>
+              <li><b>Role:</b> {{project?.role}}</li>
+              <li><b>Type:</b> {{project?.type}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="problem">
+      <div class="container">
+        <h1>Problem</h1>
+        <p></p>
+      </div>
+
+    </div>
+    -->
+  </div>
+</div>

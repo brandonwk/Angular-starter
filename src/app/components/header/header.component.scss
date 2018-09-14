@@ -1,7 +1,8 @@
 header {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
   .navbar {
     width: 100%;
@@ -10,5 +11,64 @@ header {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+
+    //background: linear-gradient(180deg,#fff 0,#f4f4f4);
+    //border-bottom: 1px solid #dce7e7;
+
+    .navbar-brand {
+      //margin-left: 0;
+      margin-right: 0;
+      margin-left: -8px !important;
+
+      .navbar-item {
+        color: #333;
+
+        &:hover, &:visited, &:active {
+          color: #333;
+        }
+
+        span {
+          margin-left: 10px;
+          font-size: 1.3rem;
+          font-weight: 500;
+          letter-spacing: .5px;
+          line-height: 1.75;
+
+          cursor: pointer;
+          transition: all .3s ease;
+
+          &:hover, &:active, &:visited {
+            background: linear-gradient(270deg,#f05f40, #ed2c5b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        img {
+          height: auto;
+          max-height: 2.1rem;
+        }
+      }
+
+    }
+
+    .navbar-end {
+
+      .navbar-item {
+
+        a {
+          color: #9fabac !important;
+          font-size: 1.05rem;
+          font-weight: 400;
+          cursor: pointer;
+          transition: all .3s ease;
+
+          &:hover  {
+            color: #2c2d2d !important;
+          }
+        }
+      }
+    }
+
   }
 }
