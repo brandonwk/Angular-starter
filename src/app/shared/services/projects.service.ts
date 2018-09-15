@@ -40,7 +40,7 @@ export class ProjectsService {
       year: 2018,
       role: 'Design/Development',
       type: 'Angular 2+, email marketing, responsive design',
-      completed: false
+      completed: true
     },
     {
       id: `WMS`,
