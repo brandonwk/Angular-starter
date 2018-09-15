@@ -86,7 +86,7 @@ export class ProjectsService {
       longdescription: `DESIGNED BY EXPERT MANUAL THERAPIST MICHAEL FINK, THE PEARL PERFORMANCE BELT WILL ASTOUND YOU WITH THE AESTHETICS AND CRAFTSMANSHIP.`,
       link: `https://www.pearlperformancebelts.com/`,
       year: 2017,
-      completed: true
+      completed: false
     },
     {
       id: `BMV`,
