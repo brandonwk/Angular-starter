@@ -123,6 +123,18 @@ export class ProjectsService {
       role: 'Development',
       type: 'Angular 2+, Company portal',
       completed: true
+    },
+    {
+      id: `GIB`,
+      title: `Gibson Island Property Management`,
+      image: `../../../assets/Location-one.jpg`,
+      description: `Managment service, supporting the entire gibson island community`,
+      longdescription: `WE ARE A PROPERTY MANAGEMENT SERVICE, CREATED TO SERVE THE ENTIRE GIBSON ISLAND COMMUNITY.`,
+      link: `https://gibsonislandpm.com`,
+      year: 2018,
+      role: 'Design/Development',
+      type: 'Angular 2+, Firebase hosting',
+      completed: true
     }
   ];
 
