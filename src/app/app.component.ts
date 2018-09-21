@@ -12,7 +12,14 @@ import { Router, NavigationEnd } from '@angular/router';
 
 export class AppComponent implements OnInit {
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
+    });
+  }
 
   ngOnInit() {
     // Takes navigated page to top of page
@@ -21,6 +28,7 @@ export class AppComponent implements OnInit {
         return;
       }
       window.scrollTo(0, 0);
+      // Google analytics
     });
   }
 
