@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="study-content">
-    <div class="about-project">
+    <div class="about-project" *ngIf="project?.id !== 'RUZ' ">
       <div class="container">
         <div class="columns is-paddingless is-marginless">
           <div class="intro column is-two-fifths">
@@ -28,14 +28,89 @@
         </div>
       </div>
     </div>
-    <!--
-    <div class="problem">
+
+    <div class="case-section" *ngIf="project?.id === 'RUZ' ">
       <div class="container">
-        <h1>Problem</h1>
-        <p></p>
+        <!-- intro -->
+        <div class="intro">
+          <p>Case Study</p>
+          <h1>{{project?.title}}</h1>
+          <!--<h2>Role: {{project?.role}} - tools used: {{project?.type}}</h2>-->
+        </div>
+
+        <div class="break"></div>
+
+        <!-- Challenge -->
+        <div class="challenge">
+          <div class="block-one">
+            <h1>The Challenge</h1>
+          </div>
+          <div class="block-two">
+            <p>Providing a central place for everyone to discover, and share viral content. Provide this data in a aggregated feed, than can be filtered and customized for each unique user.</p>
+          </div>
+        </div>
+
+        <!-- Blurb -->
+        <div class="blurb">
+          <p>Our vision is to become the internet's best viral content feed. Eventually, we aim to track over 100,000+ sources (blogs, social pages, videos etc) and have hundreds of categories.</p>
+        </div>
+
+        <!-- image section -->
+        <div class="image">
+          <img />
+        </div>
+
+        <!-- Approach -->
+        <div class="approach">
+          <div class="block-one">
+            <h1>Our Approach</h1>
+          </div>
+          <div class="block-two">
+            <p>After looking around for a product to find and aggregate viral social media and not finding one. We decided to create Ruzzit, this was a project between Knappdevelopment, two developers, and one Designer. We used a variety of Technology to scrape social media websites, find trending content, and then serve it to the user.<br>
+              Ruzzit was built on React, this allowed us to manage one code base for both mobile, and phone applications.</p>
+          </div>
+        </div>
+
+        <!-- Website -->
+        <div class="website">
+
+          <div class="columns is-marginless is-paddingless">
+            <div class="column half-width">
+              <!--<img src="https://via.placeholder.com/1200x600"/>-->
+              <img src="../../../assets/social-search.jpg" alt="Ruzzit - Social search" />
+            </div>
+            <div class="column half-width">
+              <!--<img src="https://via.placeholder.com/1200x600"/>-->
+              <img src="../../../assets/RuzzitStats.jpg" alt="Ruzzit - Social stats" />
+            </div>
+          </div>
+          <div class="full-width">
+            <!--<img src="https://via.placeholder.com/1200x600"/>-->
+            <img src="../../../assets/Ruzzit-Stories.jpg" alt="Ruzzit - Similar Stories"/>
+          </div>
+        </div>
+
+        <!-- Out come -->
+        <div class="approach">
+          <div class="block-one">
+            <h1>Outcome</h1>
+          </div>
+          <div class="block-two">
+            <p>
+              After building up our product and launching we were featured on <a href="https://www.producthunt.com/posts/ruzzit-1-0" target="_blank" rel="noopener">Producthunt</a>, <a href="https://betapage.co/startup/ruzzit" target="_blank" rel="noopener">Betapage</a>, <a href="https://www.youtube.com/watch?v=NlQrgwv9dSA&t=318s" target="_blank" rel="noopener">Youtube reviews</a>, and <a href="http://www.spiegel.de/netzwelt/web/heiko-maas-und-maaslos-ein-streit-um-saft-das-und-mehr-im-startmenue-newsletter-a-1141639.html" target="_blank" rel="noopener">spiegel.de</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="visit">
+          <button>
+            <a href="https://www.producthunt.com/posts/ruzzit-1-0" rel="noopener" target="_blank">
+              <span>Check out the project</span>
+            </a>
+          </button>
+        </div>
       </div>
 
     </div>
-    -->
   </div>
 </div>

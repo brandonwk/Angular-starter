@@ -38,26 +38,27 @@ export class HomepageComponent implements OnInit {
 
     for ( let i = 0, max = this.allproject.length; i < max; i += 1 ) {
       const p = this.allproject[i];
-      this.projectsArr.push(p);
+      if ( p.completed === true ) {
+        this.projectsArr.push(p);
+      } else {}
     }
     this.projects = [].concat.apply([], this.projectsArr );
     this.randomProjects = _.sampleSize(this.projects, 1);
-    console.log(this.randomProjects);
   }
 
   // Slider controls
-  up() {
-    this.selectedIndex ++;
-    if ( this.selectedIndex > 2) {
-      this.selectedIndex = 0;
-    }
-  }
-
-  down() {
-    this.selectedIndex --;
-    if ( this.selectedIndex < 0) {
-      this.selectedIndex = 2;
-    }
-  }
+  // up() {
+  //   this.selectedIndex ++;
+  //   if ( this.selectedIndex > 2) {
+  //     this.selectedIndex = 0;
+  //   }
+  // }
+  //
+  // down() {
+  //   this.selectedIndex --;
+  //   if ( this.selectedIndex < 0) {
+  //     this.selectedIndex = 2;
+  //   }
+  // }
 
 }

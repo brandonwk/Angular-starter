@@ -42,7 +42,8 @@ export class ProjectsService {
       year: 2018,
       role: 'Design/Development',
       type: 'Angular 2+, email marketing, responsive design',
-      completed: true
+      completed: true,
+      caseStudy: false
     },
     {
       id: `WMS`,
@@ -81,7 +82,7 @@ export class ProjectsService {
       role: 'Design/Development',
       type: 'Angular 2+, backend-development',
       completed: true,
-      caseStudy: true
+      caseStudy: false
     },
     {
       id: `PPB`,
@@ -131,7 +132,7 @@ export class ProjectsService {
       role: 'Development',
       type: 'Angular 2+, Company portal',
       completed: true,
-      caseStudy: true
+      caseStudy: false
     },
     {
       id: `GIB`,

@@ -23,6 +23,9 @@
 
         <div class="work-content" *ngIf="project?.completed == true">
           <h1>{{project?.title}}</h1>
+          <div *ngIf="project?.caseStudy === true ">
+            <div class="case-study">Case Study</div>
+          </div>
           <p>{{project?.description}}</p>
           <div class="view">
             <a *ngIf="project?.completed == true" [routerLink]="['/project/information']" [queryParams]="{id: project?.id}"><span>View Project</span></a>
