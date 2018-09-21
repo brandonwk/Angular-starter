@@ -14,4 +14,9 @@ export class ApiService {
     return this.http.post(this.url, form).toPromise();
   }
 
+  public plan( form ) {
+    this.url = `https://dreamsdocometrue.tv/api/email/customPlan`;
+    return this.http.post(this.url, form).toPromise();
+  }
+
 }

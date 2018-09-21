@@ -10,31 +10,34 @@
 
       <div class="work-slice" *ngFor="let project of randomProjects">
 
-        <div class="work-image">
+
+        <div class="work-image" *ngIf="project?.completed == true">
           <div class="image-content" [style.background-image]="'url('+project?.image+')'">
           </div>
         </div>
 
-        <div class="work-content">
+        <div class="work-image" *ngIf="project?.completed == false" style="opacity: .8; pointer-events: none; cursor: none;">
+          <div class="image-content" [style.background-image]="'url('+project?.image+')'">
+          </div>
+        </div>
+
+        <div class="work-content" *ngIf="project?.completed == true">
           <h1>{{project?.title}}</h1>
           <p>{{project?.description}}</p>
           <div class="view">
-            <a [routerLink]="['/project/information']" [queryParams]="{id: project?.id}">
-              <span>View Project</span>
-            </a>
+            <a *ngIf="project?.completed == true" [routerLink]="['/project/information']" [queryParams]="{id: project?.id}"><span>View Project</span></a>
+          </div>
+        </div>
+
+        <div class="work-content" *ngIf="project?.completed == false" style="cursor: none; pointer-events: none; opacity: .8;">
+          <h1>{{project?.title}}</h1>
+          <p>{{project?.description}}</p>
+          <div class="view">
+            <a *ngIf="project?.completed == false"><span>Coming Soon</span></a>
           </div>
         </div>
 
       </div>
-
-      <!--
-      <div class="quote-section">
-        <blockquote>
-          <h1><span>Andrew </span> - Dulak Physical Therapy and Golf</h1>
-          <p>Brandon did an amazing job on my website! Super easy process. Brandon was in constant communication to make sure every detail of the website was correct. If you are a new company just getting established or a growing company and looking for a fresh new website definitely check out knapp development! Highly recommended.</p>
-        </blockquote>
-      </div>
-      -->
 
     </div>
 

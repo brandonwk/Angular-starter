@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="container">
       <!--<span>Plans that scale with your company</span>-->
-      <span>We believe in transparent, flexible, and open communication approaches to building websites.</span>
+      <span>At Knappdevelopment, we believe in a transparent, flexible approach to building products.</span>
     </div>
   </div>
 
@@ -98,7 +98,7 @@
                       <input type="text" class="form-control input" name="contactName" [(ngModel)]="model.contactName" #contactName="ngModel" [ngClass]="{'is-invalid': f.submitted && contactName.invalid}" required minlength="1" maxlength="75" placeholder="John smith"/>
                       <div *ngIf="f.submitted && contactName.invalid" class="invalid-feedback">
                         <div *ngIf="contactName.errors.required">
-                          <p>Please enter a name</p>
+                          Please enter a name
                         </div>
                       </div>
                     </div>
@@ -119,7 +119,7 @@
                       <input type="text" class="form-control input" name="contactCompany" [(ngModel)]="model.contactCompany" #contactCompany="ngModel" [ngClass]="{'is-invalid': f.submitted && contactCompany.invalid}" required minlength="1" maxlength="75" placeholder="company name"/>
                       <div *ngIf="f.submitted && contactCompany.invalid" class="invalid-feedback">
                         <div *ngIf="contactCompany.errors.required">
-                          <p>Please enter a company name</p>
+                          Please enter a company name
                         </div>
                       </div>
                     </div>
@@ -145,7 +145,7 @@
         <h2>Pricing</h2>
         <p>Choose the Right Website Plan for Your Business</p>
 
-        <div class="pricing-area">
+        <div class="pricing-area" *ngIf="!planSelected">
           <div class="pricing-table is-comparative">
 
             <div class="pricing-plan is-features">
@@ -154,7 +154,8 @@
                 <span class="plan-price-amount">&nbsp;</span>
                 <span class="month-price" style="color: #ed2c5b;">
                 <!--<span class="plan-price-currency">$</span>-->
-                </span>&nbsp;</div>
+                </span>&nbsp;
+              </div>
 
               <div class="plan-items">
                 <div class="plan-item" style="text-align: center; font-weight: bold;">
@@ -395,10 +396,21 @@
             </div>
 
           </div>
+
+          <div class="looking" *ngIf="!planSelected">
+            <h2>Looking for something more?</h2>
+            <p>Build a custom plan, and we will contact you in the next 24hrs.</p>
+
+            <button routerLink="/custom-plan">
+              <span>Build your own plan</span>
+            </button>
+          </div>
+
         </div>
 
         <div class="selected-plan" *ngIf="planSelected">
-          <h3>You have selected the <b>{{plan}}</b> plan</h3>
+
+          <h3>You have selected the <b (click)="planSelected = !planSelected">{{plan}}</b> plan</h3>
           <p>Fill out the form below and we will contact you in the next 24hrs.</p>
 
           <form name="form" (ngSubmit)="f.form.valid && submitCTA(f.value)" #f="ngForm" novalidate>
@@ -411,7 +423,7 @@
                       <input type="text" class="form-control input" name="contactName" [(ngModel)]="model.contactName" #contactName="ngModel" [ngClass]="{'is-invalid': f.submitted && contactName.invalid}" required minlength="1" maxlength="75" placeholder="John smith"/>
                       <div *ngIf="f.submitted && contactName.invalid" class="invalid-feedback">
                         <div *ngIf="contactName.errors.required">
-                          <p>Please enter a name</p>
+                          Please enter a name
                         </div>
                       </div>
                     </div>
@@ -432,7 +444,7 @@
                       <input type="text" class="form-control input" name="contactCompany" [(ngModel)]="model.contactCompany" #contactCompany="ngModel" [ngClass]="{'is-invalid': f.submitted && contactCompany.invalid}" required minlength="1" maxlength="75" placeholder="company name"/>
                       <div *ngIf="f.submitted && contactCompany.invalid" class="invalid-feedback">
                         <div *ngIf="contactCompany.errors.required">
-                          <p>Please enter a company name</p>
+                          Please enter a company name
                         </div>
                       </div>
                     </div>

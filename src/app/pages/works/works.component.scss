@@ -125,6 +125,9 @@
       .work-image {
         width: 56%;
 
+        cursor: pointer;
+        pointer-events: auto;
+
         .image-content {
           width: 100%;
           height: 100%;
@@ -211,6 +214,12 @@
           padding-right: 20px;
         }
       }
+    }
+
+    .coming-soon {
+      opacity: .8;
+      pointer-events: none;
+      cursor: none;
     }
   }
 

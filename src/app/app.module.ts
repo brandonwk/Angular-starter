@@ -18,6 +18,7 @@ import { WorksComponent } from './pages/works/works.component';
 import { CasestudyComponent } from './pages/casestudy/casestudy.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { CustomComponent } from './pages/custom/custom.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ServicesComponent } from './pages/services/services.component';
     WorksComponent,
     CasestudyComponent,
     ContactComponent,
-    ServicesComponent
+    ServicesComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

@@ -492,6 +492,8 @@
 
         .pricing-table {
 
+          margin-bottom: 60px;
+
           .pricing-plan {
 
             .plan-item {
@@ -528,6 +530,116 @@
           }
         }
 
+        .looking {
+
+          width: 80%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+
+          h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.3em;
+            margin: 0;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.75;
+            letter-spacing: 1px;
+            color: #666;
+            text-align: center;
+            word-break: break-word;
+          }
+
+          button {
+            width: 240px;
+            height: 39px;
+            border-radius: 3px;
+            background-color: transparent;
+            background: linear-gradient(270deg,#f05f40, #ed2c5b);
+            position: relative;
+            outline: none;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            border: none;
+            transition: all .3s ease;
+            color: white;
+
+            margin-top: 30px;
+
+            span {
+              color: white;
+              transition: all .3s ease;
+              z-index: 1;
+              font-size: 13px;
+              font-weight: 500;
+              letter-spacing: .7px;
+              padding: 0;
+              margin: 0;
+            }
+
+            &:before {
+              content: "";
+              display: block;
+              height: 100%;
+              position: absolute;
+              z-index: -1;
+              width: 100%;
+              right: 0;
+              top: 4px;
+              background-color: #5c5d62;
+              opacity: .3;
+              filter: blur(10px);
+            }
+
+            &:after {
+              width: 0;
+              left: 0;
+              top: 0;
+              transition: all .3s ease;
+              background-color: #fff;
+              border-radius: 3px;
+              content: "";
+              display: block;
+              height: 100%;
+              position: absolute;
+            }
+
+            &:hover {
+
+              span {
+                color: #ed2c5b;
+                transition: all .3s ease;
+                z-index: 1;
+              }
+
+              &:after{
+                width: 100%;
+              }
+            }
+
+            @media screen and (max-width: 965px) {
+              margin-left: 15%;
+              margin-right: 15%;
+              width: 70%;
+            }
+          }
+        }
+
       }
 
       .selected-plan {
@@ -555,6 +667,7 @@
             text-decoration: underline;
             color: #ed2c5b;
             font-size: 1.4rem;
+            cursor: pointer;
           }
         }
 

@@ -195,6 +195,13 @@
         margin-top: 27px;
         float: right;
         margin-right: 13px;
+
+        .button {
+          background-color: #ed2c5b;
+          width: 110px;
+          height: 40px;
+          color: #FFFFFF;
+        }
       }
 
       @media screen and (max-width: 965px) {

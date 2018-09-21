@@ -6,10 +6,12 @@ import { ServicesComponent } from './pages/services/services.component';
 import { WorksComponent } from './pages/works/works.component';
 import { CasestudyComponent } from './pages/casestudy/casestudy.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import {CustomComponent} from './pages/custom/custom.component';
 
 const routes: Routes = [
   { path: '',                       component: HomepageComponent },
   { path: 'services',               component: ServicesComponent },
+  { path: 'custom-plan',            component: CustomComponent },
   { path: 'works',                  component: WorksComponent },
   { path: 'project/:projectID',     component: CasestudyComponent },
   { path: 'contact',                component: ContactComponent }

@@ -1,0 +1,358 @@
+<div class="custom-page">
+  <div class="hero">
+    <div class="container">
+      <!--<span>Plans that scale with your company</span>-->
+      <span>Build a custom plan for your business needs</span>
+    </div>
+  </div>
+
+  <div class="custom-content">
+    <div class="container">
+
+      <div class="custom-overview gradient">
+        <h1>Fill out the form below and we will contact you in 24hrs with an estimate.</h1>
+        <p>Included with a custom plan: <br>
+          <i>Custom reponsive website, website hosting, support, maintenance, SEO optimization, and monthly SEO reports.</i></p>
+        <div class="break"></div>
+
+
+        <div class="successForm" *ngIf="successfulForm">
+          <h1>Thank you!</h1>
+          <p>Your form was submitted, someone will contact you in the next 24 hours.</p>
+        </div>
+
+        <div class="form">
+          <form name="form" (ngSubmit)="f.form.valid && submitPlan(f.value)" #f="ngForm" novalidate *ngIf="!successfulForm">
+            <fieldset ngModelGroup="companyInformation">
+
+              <h2>Contact Information:</h2>
+
+              <div class="field is-horizontal">
+
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">YOUR NAME</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <input type="text" class="form-control input" name="contactName" [(ngModel)]="model.contactName" #contactName="ngModel" [ngClass]="{'is-invalid': f.submitted && contactName.invalid}" required minlength="1" maxlength="75"/>
+                        <div *ngIf="f.submitted && contactName.invalid" class="invalid-feedback">
+                          <div *ngIf="contactName.errors.required">
+                            Please enter a name
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 50%;">
+                  <div class="field-label is-normal">
+                    <label class="label">YOUR EMAIL ADDRESS</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <input type="text" class="form-control input" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" email minlength="0" maxlength="50" required/>
+                        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                          <div *ngIf="email.errors.required">Please enter an email</div>
+                          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">YOUR COMPANY</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control">
+                        <input type="text" class="form-control input" name="contactCompany" [(ngModel)]="model.contactCompany" #contactCompany="ngModel" [ngClass]="{'is-invalid': f.submitted && contactCompany.invalid}" required minlength="1" maxlength="75"/>
+                        <div *ngIf="f.submitted && contactCompany.invalid" class="invalid-feedback">
+                          <div *ngIf="contactCompany.errors.required">
+                            Please enter a company name
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+            <div class="break"></div>
+
+            <fieldset ngModelGroup="plan">
+
+              <h2>Website Features:</h2>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">TOTAL NUMBER OF PAGES?</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="pagesNeeded" [(ngModel)]="model.pagesNeeded" #pagesNeeded="ngModel" pagesNeeded [ngClass]="{'is-invalid': f.submitted && pagesNeeded.invalid}" required>
+                            <option value="null" disabled>Number of pages</option>
+                            <option value="onetofive">1 - 5</option>
+                            <option value="fivetoten">5 - 10</option>
+                            <option value="tenplus">10+</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && pagesNeeded.invalid" class="invalid-feedback">
+                          <div *ngIf="pagesNeeded.errors.required">Please select a number of pages for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">DO YOU NEED CUSTOM LANDING PAGES</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="landingPagesNeeded" [(ngModel)]="model.landingPagesNeeded" #landingPagesNeeded="ngModel" landingPagesNeeded [ngClass]="{'is-invalid': f.submitted && landingPagesNeeded.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && landingPagesNeeded.invalid" class="invalid-feedback">
+                          <div *ngIf="landingPagesNeeded.errors.required">Please select if you need custom landing pages for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 50%;" *ngIf="model.landingPagesNeeded === 'YES' ">
+                  <div class="field-label is-normal">
+                    <label class="label">NUMBER OF CUSTOM LANDING PAGES</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="numberoflandingpage" [(ngModel)]="model.numberoflandingpage" #numberoflandingpage="ngModel" numberoflandingpage [ngClass]="{'is-invalid': f.submitted && numberoflandingpage.invalid}">
+                            <option value="null" disabled>Number of pages</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="more">2+</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && numberoflandingpage.invalid" class="invalid-feedback">
+                          <div *ngIf="numberoflandingpage.errors.required">Please select a number of custom landing pages needed for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">DO YOU WANT TO MANAGE YOUR OWN CONTENT? (Wordpress, drupal, etc.)</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="CMSNeeded" [(ngModel)]="model.CMSNeeded" #CMSNeeded="ngModel" CMSNeeded [ngClass]="{'is-invalid': f.submitted && CMSNeeded.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && CMSNeeded.invalid" class="invalid-feedback">
+                          <div *ngIf="CMSNeeded.errors.required">Please select if you need a content management system for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="break"></div>
+
+              <h2>Online marketing and SEO:</h2>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">SOCIAL MEDIA MARKETING</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="Social" [(ngModel)]="model.Social" #Social="ngModel" Social [ngClass]="{'is-invalid': f.submitted && Social.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && Social.invalid" class="invalid-feedback">
+                          <div *ngIf="Social.errors.required">Please select if you need social media marketing for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 50%;">
+                  <div class="field-label is-normal">
+                    <label class="label">SOCIAL MEDIA API INTEGRATION</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="SocialAPI" [(ngModel)]="model.SocialAPI" #SocialAPI="ngModel" SocialAPI [ngClass]="{'is-invalid': f.submitted && SocialAPI.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && SocialAPI.invalid" class="invalid-feedback">
+                          <div *ngIf="SocialAPI.errors.required">Please select if social media api integration is needed for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field is-horizontal">
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">DO YOU WANT EMAIL CAMPAIGNS</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="emailCampaigns" [(ngModel)]="model.emailCampaigns" #emailCampaigns="ngModel" emailCampaigns [ngClass]="{'is-invalid': f.submitted && emailCampaigns.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && emailCampaigns.invalid" class="invalid-feedback">
+                          <div *ngIf="emailCampaigns.errors.required">Please select if you email campaigns for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="width: 50%;" *ngIf="model.emailCampaigns === 'YES' ">
+                  <div class="field-label is-normal">
+                    <label class="label">NUMBER OF CAMPAIGNS PER MONTH</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="campaignsPerMonth" [(ngModel)]="model.campaignsPerMonth" #campaignsPerMonth="ngModel" campaignsPerMonth [ngClass]="{'is-invalid': f.submitted && campaignsPerMonth.invalid}">
+                            <option value="null" disabled>NUMBER OF CAMPAIGNS</option>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="more">2+</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && campaignsPerMonth.invalid" class="invalid-feedback">
+                          <div *ngIf="campaignsPerMonth.errors.required">Please select a number of email campaigns for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="field is-horizontal">
+
+                <div style="width: 48%; margin-right: 2%;">
+                  <div class="field-label is-normal">
+                    <label class="label">MONTHLY WEBSITE REPORTS</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="websiteReports" [(ngModel)]="model.websiteReports" #websiteReports="ngModel" websiteReports [ngClass]="{'is-invalid': f.submitted && websiteReports.invalid}" required>
+                            <option value="null" disabled>SELECT</option>
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && websiteReports.invalid" class="invalid-feedback">
+                          <div *ngIf="websiteReports.errors.required">Please select if you want monthly website reports for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div style="width: 50%;">
+                  <div class="field-label is-normal">
+                    <label class="label">DO YOU WANT MONTHLY CONSULTATIONS</label>
+                  </div>
+                  <div class="field-body">
+                    <div class="field">
+                      <div class="control is-expanded">
+                        <div class="select is-fullwidth">
+                          <select [ngModel] name="consultations" [(ngModel)]="model.consultations" #consultations="ngModel" consultations [ngClass]="{'is-invalid': f.submitted && consultations.invalid}" required>
+                            <option value="null" disabled>Select</option>
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                          </select>
+                        </div>
+                        <div *ngIf="f.submitted && consultations.invalid" class="invalid-feedback">
+                          <div *ngIf="consultations.errors.required">Please select if you want monthly consultations for your project.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+            <div class="send">
+              <div class="field is-grouped is-grouped-right">
+                <!--<p class="control"></p>-->
+                <button class="button is-primary">SEND</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
