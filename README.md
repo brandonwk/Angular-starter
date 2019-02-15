@@ -1,4 +1,4 @@
-# AngularStarter
+# AngularStarter [![Netlify Status](https://api.netlify.com/api/v1/badges/62bbcedd-89f7-4cfc-b1c2-38d742d4dd31/deploy-status)](https://app.netlify.com/sites/cocky-cray-f0d583/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
